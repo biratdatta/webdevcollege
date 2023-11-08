@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Navigation Frame</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+    <div class="centered-component">
+        <div class="frame">
+            <img src="Web UI 404-Binocular.jpg" alt="Centered Image">
+            <p>This is the text below the picture inside the frame.</p>
+            <div class="buttons">
+                <button class="red-button" onclick="redirectToPage('red.html')">Red Page</button>
+                <button class="green-button" onclick="redirectToPage('green.html')">Green Page</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+
+</html>
