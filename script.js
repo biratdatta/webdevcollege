@@ -41,8 +41,10 @@ function validateLogin(event) {
     if (storedData[loginUsername] === loginPassword) {
         alert('Login successful!');
         // Redirect to another HTML page
-        window.location.href = 'dashboard.html';
+        window.location.href = 'index.html';
     } else {
         alert('Invalid login credentials.');
     }
 }
+
+
