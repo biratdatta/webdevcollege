@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <xsl:template match="/">
+    <html>
+      <head>
+        <title>Patient Details</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+          }
+          h2 {
+            color: #336699;
+          }
+          div {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+          }
+          h3 {
+            margin-top: 0;
+            color: #444;
+          }
+          p {
+            margin: 5px 0;
+          }
+          li {
+            list-style-type: circle;
+            margin-left: 20px;
+          }
+        </style>
+      </head>
+      <body>
+        <h2>Patient Information</h2>
+        <xsl:apply-templates select="hospital/patient"/>
+      </body>
+    </html>
+  </xsl:template>
+
+  <xsl:template match="patient">
+    <div>
+      <h3><xsl:value-of select="name"/></h3>
+      <p>Social Security Number: <xsl:value-of select="social_security_number"/></p>
+      <p>Age: <xsl:value-of select="age"/></p>
+      <p>Room Number: <xsl:value-of select="room_number"/></p>
+      <p>Primary Insurance Company: <xsl:value-of select="insurance/primary/company_name"/></p>
+      <p>Member ID: <xsl:value-of select="insurance/primary/member_id"/></p>
+      <p>Group Number: <xsl:value-of select="insurance/primary/group_number"/></p>
+      <p>Phone Number: <xsl:value-of select="insurance/primary/phone_number"/></p>
+      <p>Address: <xsl:value-of select="insurance/primary/address/street"/>, 
+                 <xsl:value-of select="insurance/primary/address/city"/>, 
+                 <xsl:value-of select="insurance/primary/address/state"/> 
+                 <xsl:value-of select="insurance/primary/address/zip"/>
+      </p>
+      <p>Secondary Insurance Company: <xsl:value-of select="insurance/secondary/company_name"/></p>
+      <p>Medical Problems: <xsl:for-each select="medical_problems/problem">
+          <li><xsl:value-of select="."/></li>
+        </xsl:for-each>
+      </p>
+      <p>Drug Allergies: <xsl:for-each select="drug_allergies/allergy">
+          <li><xsl:value-of select="."/></li>
+        </xsl:for-each>
+      </p>
+    </div>
+  </xsl:template>
+</xsl:stylesheet>

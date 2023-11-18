@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalog [
+  <!ENTITY toyota "Toyota">
+  <!ENTITY honda "Honda">
+  <!ENTITY ford "Ford">
+]>
+<catalog>
+  <car>
+    <make>&toyota;</make>
+    <model>Corolla</model>
+    <year>2023</year>
+    <color>White</color>
+    <engine>
+      <number_of_cylinders>4</number_of_cylinders>
+      <fuel_system>Gasoline</fuel_system>
+    </engine>
+    <number_of_doors>4</number_of_doors>
+    <transmission_type>Automatic</transmission_type>
+    <accessories
+      radio="Yes"
+      air_conditioning="Yes"
+      power_windows="Yes"
+      power_steering="Yes"
+      power_brakes="Yes"
+    />
+  </car>
+  <car>
+    <make>&honda;</make>
+    <model>Civic</model>
+    <year>2023</year>
+    <color>Black</color>
+    <engine>
+      <number_of_cylinders>4</number_of_cylinders>
+      <fuel_system>Hybrid</fuel_system>
+    </engine>
+    <number_of_doors>4</number_of_doors>
+    <transmission_type>CVT</transmission_type>
+    <accessories
+      radio="Yes"
+      air_conditioning="Yes"
+      power_windows="Yes"
+      power_steering="Yes"
+      power_brakes="Yes"
+    />
+  </car>
+  <car>
+    <make>&ford;</make>
+    <model>Explorer</model>
+    <year>2022</year>
+    <color>Blue</color>
+    <engine>
+      <number_of_cylinders>6</number_of_cylinders>
+      <fuel_system>Petrol</fuel_system>
+    </engine>
+    <number_of_doors>4</number_of_doors>
+    <transmission_type>Automatic</transmission_type>
+    <accessories
+      radio="Yes"
+      air_conditioning="Yes"
+      power_windows="Yes"
+      power_steering="Yes"
+      power_brakes="Yes"
+    />
+  </car>
+</catalog>
