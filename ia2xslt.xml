@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <html>
+    <head>
+      <title>Patient Information</title>
+    </head>
+    <body>
+      <h1>Patient Information</h1>
+      <xsl:apply-templates select="hospital/patient"/>
+    </body>
+  </html>
+</xsl:template>
+
+<xsl:template match="patient">
+  <div>
+    <h2>Patient Details</h2>
+    <p><strong>Social Security Number:</strong> <xsl:value-of select="SSN"/></p>
+    <p><strong>Name:</strong> <xsl:value-of select="name/first"/> <xsl:value-of select="name/last"/></p>
+    <p><strong>Age:</strong> <xsl:value-of select="age"/></p>
+    <p><strong>Gender:</strong> <xsl:value-of select="gender"/></p>
+    <p><strong>Contact:</strong> Phone: <xsl:value-of select="contact/phone"/> Email: <xsl:value-of select="contact/email"/></p>
+    <p><strong>Address:</strong> 
+      <xsl:value-of select="address/street"/>, 
+      <xsl:value-of select="address/city"/>, 
+      <xsl:value-of select="address/state"/> - 
+      <xsl:value-of select="address/zip"/>
+    </p>
+  </div>
+</xsl:template>
+
+</xsl:stylesheet>
