@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Session and Cookie Example</title>
+    <title>Session and Cookie </title>
 </head>
 <body>
-    <h1> Session and Cookie Example</h1>
+    <h1> Session and Cookie  Storage</h1>
     <form action="page2.php" method="post">
         <label for="username">Enter Username:</label>
         <input type="text" id="username" name="username">
